@@ -1,11 +1,10 @@
 import requests
 import sys
-command = sys.argv[1]
 
-if command == "install" :
-  package = sys.argv[2]
+if sys.argv[1] == "install" :
+  
   print("[Downloading]: Downloading Package")
-  url = "https://package-pln.neoncorp.eu.org/linux".package
+  url = "https://package-pln.neoncorp.eu.org/linux".sys.argv[2]
   r = requests.get(url, allow_redirects=True)
 
 
