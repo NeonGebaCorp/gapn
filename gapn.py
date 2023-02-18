@@ -4,7 +4,7 @@ command = sys.argv[1]
 package = sys.argv[2]
 if command == "install" :
   print("[Downloading]: Downloading Package")
-  url = "https://package-pln.neoncorp.eu.org".package
+  url = "https://package-pln.neoncorp.eu.org/linux".package
   r = requests.get(url)
 
   with open('/bin', 'wb') as f:
