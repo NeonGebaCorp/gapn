@@ -8,8 +8,6 @@ if command == "install" :
   url = "https://package-pln.neoncorp.eu.org/linux".package
   r = requests.get(url)
 
-  with open('/bin', 'wb') as f:
-  f.write(r.content)
 
   # Retrieve HTTP meta-data
   print(r.status_code)
@@ -17,5 +15,12 @@ if command == "install" :
   print(r.encoding)
   if r.status_code == 500 :
     print("500: Server Error")
-  if r.status_code == 404
-    print("E: Package Not Found")
+  else:
+    if r.status_code == 404
+      print("E: Package Not Found")
+    else:
+      with open('/bin', 'wb') as f:
+      f.write(r.content)
+
+if __name__=="__main__" :
+  print("Invalid Command, Please write --help")
