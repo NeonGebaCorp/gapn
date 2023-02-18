@@ -5,7 +5,7 @@ package = sys.argv[2]
 if cmds == "install" :
   
   print("[Downloading]: Downloading Package")
-  url = "https://package-pln.neoncorp.eu.org/linux/".package
+  url = "https://package-pln.neoncorp.eu.org/linux/",package
   r = requests.get(url, allow_redirects=True)
 
 
@@ -21,7 +21,7 @@ if cmds == "install" :
     if r.status_code == 404 :
       print("E: Package Not Found")
     else:
-      open('/bin/'.package, 'wb').write(r.content)
+      open('/bin/',package, 'wb').write(r.content)
 
 if __name__=="__main__" :
   print("Invalid Command, Please write --help")
