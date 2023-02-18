@@ -4,10 +4,10 @@ command = sys.argv[1]
 package = sys.argv[2]
 if command == "install" :
   print("[Downloading]: Downloading Package")
-  url = 'http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg'
+  url = "https://package-pln.neoncorp.eu.org".package
   r = requests.get(url)
 
-  with open('/Users/scott/Downloads/cat3.jpg', 'wb') as f:
+  with open('/bin', 'wb') as f:
   f.write(r.content)
 
   # Retrieve HTTP meta-data
@@ -17,4 +17,4 @@ if command == "install" :
   if r.status_code == 500 :
     print("500: Server Error")
   if r.status_code == 404
-    print("E: Package Now Found")
+    print("E: Package Not Found")
