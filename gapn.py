@@ -16,7 +16,7 @@ if command == "install" :
   if r.status_code == 500 :
     print("500: Server Error")
   else:
-    if r.status_code == 404
+    if r.status_code == 404 :
       print("E: Package Not Found")
     else:
       with open('/bin', 'wb') as f:
